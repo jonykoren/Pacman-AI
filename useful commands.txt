@@ -1,0 +1,82 @@
+python2.7 pacman.py
+python2.7 pacman.py --layout testMaze --pacman GoWestAgent
+python2.7 pacman.py --layout tinyMaze --pacman GoWestAgent
+python2.7 pacman.py -h
+python2.7 pacman.py -l tinyMaze -p SearchAgent -a fn=tinyMazeSearch
+python2.7 pacman.py -l tinyMaze -p SearchAgent
+python2.7 pacman.py -l mediumMaze -p SearchAgent
+python2.7 pacman.py -l bigMaze -z .5 -p SearchAgent
+python pacman.py -l mediumMaze -p SearchAgent -a fn=bfs
+python pacman.py -l bigMaze -p SearchAgent -a fn=bfs -z .5
+python eightpuzzle.py
+python pacman.py -l mediumMaze -p SearchAgent -a fn=ucs
+python pacman.py -l mediumDottedMaze -p StayEastSearchAgent
+python pacman.py -l mediumScaryMaze -p StayWestSearchAgent
+python pacman.py -l bigMaze -z .5 -p SearchAgent -a fn=astar,heuristic=manhattanHeuristic 
+python2.7 pacman.py -l tinyCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p SearchAgent -a fn=bfs,prob=CornersProblem
+python pacman.py -l mediumCorners -p AStarCornersAgent -z 0.5
+python pacman.py -l testSearch -p AStarFoodSearchAgent
+python2.7 pacman.py -l trickySearch -p AStarFoodSearchAgent
+python pacman.py -l bigSearch -p ClosestDotSearchAgent -z .5 
+python pacman.py -l bigSearch -p ApproximateSearchAgent -z .5 -q 
+
+
+
+
+==============================================================
+
+Dear all,
+
+I'll be helping out Hector with the lab exercises for the Autonomous Systems course this semester.
+These will consist of between 4 and 5 assignments which I will send you on an email one or two
+weeks in advance, depending on the assignment, along with the expected submission date.
+The assignments will usually be either programming or modeling assignments, and will exercise
+the things you see in class with Hector.
+We will work on search algorithms, SAT solvers, classical planning, MDPs, and possibly deep
+reinforcement learning.
+Note that you are expected to work in groups of 2-3 people.
+
+
+For the first assignment we'll work on implementing some search algorithms on the Berkeley's Pacman project,
+which is easy and instructive. The project is implemented in Python, but you don't need to be an expert Python 
+programmer to do it; the code is very clean and self-explanatory.
+If necessary, however, there are plenty of good Python tutorials online, just ask me for pointers.
+
+All of the project information is here:
+---------------------------------------
+http://ai.berkeley.edu/search.html
+
+In this first assignment I basically ask you to go through questions Q1-Q8 and answer them.
+You'll basically be asked "complete" a partial implementation of a number of search
+algorithms (DFS, BFS, A*, etc.), and also to design some heuristics.
+
+You should answer the 8 questions and send me *one single email per group of students* with:
+
+- The names of the students that make up the group.
+
+- All the necessary files to run the code, in a compressed file. You can just send the "search" folder
+with all of the files of the project, including the ones you have written.
+
+- A short PDF file with a concise description of your answers in questions Q5, Q6, Q7. For instance,
+for question 5, describe your state representation, for questions 6 and 7 describe your heuristics and
+justify why they are admissible / consistent. Of course you might add explanations for other questions
+as well if you think they can help understand your answer. Adding short comments in the code usually
+helps too.
+
+The deadline for this submission is Monday 03rd February.
+
+Feel free to email me with any questions you might have. 
+
+Best,
+Guillem
+
+
+P.S. All of the Berkeley Pacman projects have an autograder. This is a just a python script that you can run by executing python autograder.py,
+and will run your code through a number of tests, to show you potential mistakes that you might have done. 
+It can be very useful for you to understand what you are doing, and whether you're doing it right or not. 
+Besides, the first thing I'll do when I receive your code is to run the autograder on it - so please, make sure that you have done the same before and the output is acceptable.
+This does not mean that you need to have a perfect score on the autograder, nor that your assignment score will be exactly that of the autograder :-)
+
+
+=====================================================
