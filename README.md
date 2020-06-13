@@ -1,4 +1,8 @@
 # Pacman-AI
+AI Search algorithms project with pacman 
 
-look on instructions && useful commands
+## Instructions - Berkeley UC
+https://inst.eecs.berkeley.edu/~cs188/pacman/search.html
 
+# '''search.py'''
+Where all of your search algorithms will reside.
